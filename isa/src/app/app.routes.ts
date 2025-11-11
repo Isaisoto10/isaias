@@ -7,16 +7,14 @@ import { Categorias } from './pages/categorias/categorias';
 import { Agregar } from './pages/agregar/agregar';
 import { Nosotros } from './pages/nosotros/nosotros';
 export const routes: Routes = [
-{ path: "", component: Home },
-{ path: 'home', component: Home },
+{path: "", component: Home },
+{path:'home', component: Home },
 {path :'galeria', component: Galeria},
 {path: 'contacto', component: Contacto},
 {path: 'ofertas', component: Ofertas},
 {path: 'categorias', component: Categorias},
 {path: 'agregar', component: Agregar},
-{path: 'nosotros', component: Nosotros}
-
-
+{path: 'nosotros', component: Nosotros},
 ]
 
 
