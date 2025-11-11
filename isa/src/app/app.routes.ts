@@ -6,6 +6,7 @@ import { Ofertas } from './pages/ofertas/ofertas';
 import { Categorias } from './pages/categorias/categorias';
 import { Agregar } from './pages/agregar/agregar';
 import { Nosotros } from './pages/nosotros/nosotros';
+import { Consola } from './pages/consola/consola';
 export const routes: Routes = [
 {path: "", component: Home },
 {path:'home', component: Home },
@@ -15,6 +16,7 @@ export const routes: Routes = [
 {path: 'categorias', component: Categorias},
 {path: 'agregar', component: Agregar},
 {path: 'nosotros', component: Nosotros},
+{path: 'consola', component: Consola}
 ]
 
 
