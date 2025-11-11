@@ -1,80 +1,92 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="Home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="galeria" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Galeria
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="galeria">Productos</a></li>
-            <li><a class="dropdown-item" href="#">PC</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="consola">Consolas</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
+  <div id="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" id="nav">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" style="color: white;">Enanin Games</a>
 
+        <div class="container2">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-
-
-
-
-
-
-<router-outlet></router-outlet>
-
-<!-- Footer --><footer class="bg-dark text-white text-center text-lg-start mt-auto py-4">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Columna izquierda -->
-      <div class="col-lg-6 mb-3 mb-lg-0">
-        <h5 class="fw-bold">Mi Sitio Web</h5>
-        <p class="mb-0">Construyendo ideas con Angular y Bootstrap 💻</p>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="nosotros">Nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="galeria"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Galería
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="galeria">Productos</a></li>
+                  <li><a class="dropdown-item" href="pc">PC</a></li>
+                  <li><a class="dropdown-item" href="consola">Consolas</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="contacto">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
+    </nav>
 
-      <!-- Columna derecha -->
-      <div class="col-lg-6 text-lg-end">
-        <a href="https://facebook.com" target="_blank" class="text-white me-3">
-          <i class="bi bi-facebook fs-4"></i>
-        </a>
-        <a href="https://twitter.com" target="_blank" class="text-white me-3">
-          <i class="bi bi-twitter-x fs-4"></i>
-        </a>
-        <a href="https://instagram.com" target="_blank" class="text-white me-3">
-          <i class="bi bi-instagram fs-4"></i>
-        </a>
-        <a href="mailto:contacto@misitio.com" class="text-white">
-          <i class="bi bi-envelope-fill fs-4"></i>
-        </a>
+    <!-- Carousel -->
+    <app-carousel></app-carousel>
+
+    <!-- Contenido dinámico -->
+    <router-outlet></router-outlet>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center text-lg-start mt-auto py-4">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Columna izquierda -->
+          <div class="col-lg-6 mb-3 mb-lg-0">
+            <h5 class="fw-bold">Mi Sitio Web</h5>
+            <p class="mb-0">Isaias Soto</p>
+          </div>
+
+          <!-- Columna derecha -->
+          <div class="col-lg-6 text-lg-end">
+            <a href="https://facebook.com" target="_blank" class="text-white me-3">
+              <i class="bi bi-facebook fs-4"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="text-white me-3">
+              <i class="bi bi-twitter-x fs-4"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="text-white me-3">
+              <i class="bi bi-instagram fs-4"></i>
+            </a>
+            <a href="mailto:contacto@misitio.com" class="text-white">
+              <i class="bi bi-envelope-fill fs-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <hr class="border-light my-3" />
+        <p class="mb-0 small">
+          &copy; 2025 Mi Sitio Web. Todos los derechos reservados.
+        </p>
       </div>
-    </div>
-
-    <hr class="border-light my-3">
-
-    <p class="mb-0 small">
-      &copy; 2025 Mi Sitio Web. Todos los derechos reservados.
-    </p>
+    </footer>
   </div>
-</footer>
-

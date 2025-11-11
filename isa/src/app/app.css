@@ -1,0 +1,80 @@
+#container {
+    background-color: #14213d;
+}
+
+/* Estilo general del navbar */
+.navbar {
+  background-color: #0b0d1a; /* fondo oscuro elegante */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Enlaces del navbar */
+.navbar .nav-link {
+  color: #dcdcdc;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  margin-right: 18px;
+  transition: color 0.3s ease;
+}
+
+/* Hover y enlace activo */
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Dropdown */
+.navbar .dropdown-menu {
+  background-color: #14162b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.navbar .dropdown-item {
+  color: #cfcfcf;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+/* Botón toggle (vista móvil) */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* Input de búsqueda */
+.navbar .form-control {
+  background-color: #1c1e30;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 6px;
+}
+
+.navbar .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar .btn-outline-success {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.navbar .btn-outline-success:hover {
+  background-color: #00b894;
+  border-color: #00b894;
+  color: #fff;
+}
+
+.container2{
+    margin-left: 20rem !important;
+}

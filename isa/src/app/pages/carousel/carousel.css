@@ -1,0 +1,80 @@
+/* ===== CAROUSEL STYLING ===== */
+
+#carouselExampleIndicators {
+  max-width: 800px;
+  margin: 50px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Transición suave entre slides */
+.carousel-item {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Imágenes con efecto suave */
+.carousel-item img {
+  border-radius: 15px;
+  filter: brightness(0.9) contrast(1.1);
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+/* Zoom sutil al pasar el mouse */
+.carousel-item img:hover {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+/* Indicadores personalizados (puntos) */
+.carousel-indicators [data-bs-target] {
+  background-color: #ddd;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: #ff6f61;
+  width: 16px;
+  height: 16px;
+}
+
+/* Botones de control (anterior / siguiente) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: 60%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(255, 111, 97, 0.9);
+  transform: scale(1.1);
+}
+
+/* Sombra detrás de los botones */
+.carousel-control-prev,
+.carousel-control-next {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Texto de accesibilidad (oculto visualmente pero legible por lectores de pantalla) */
+.visually-hidden {
+  position: absolute;
+}
+
+/* ===== EFECTO DE FADE (opcional) ===== */
+.carousel.fade .carousel-item {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.carousel.fade .carousel-item.active {
+  opacity: 1;
+}

@@ -7,6 +7,9 @@ import { Categorias } from './pages/categorias/categorias';
 import { Agregar } from './pages/agregar/agregar';
 import { Nosotros } from './pages/nosotros/nosotros';
 import { Consola } from './pages/consola/consola';
+import { Pc } from './pages/pc/pc';
+import { Carousel } from './pages/carousel/carousel';
+
 export const routes: Routes = [
 {path: "", component: Home },
 {path:'home', component: Home },
@@ -16,7 +19,9 @@ export const routes: Routes = [
 {path: 'categorias', component: Categorias},
 {path: 'agregar', component: Agregar},
 {path: 'nosotros', component: Nosotros},
-{path: 'consola', component: Consola}
+{path: 'consola', component: Consola},
+{path: 'pc', component: Pc },
+{path: 'carousel', component: Carousel }
 ]
 
 
