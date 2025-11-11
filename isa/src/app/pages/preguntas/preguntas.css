@@ -1,0 +1,48 @@
+/* Contenedor general */
+.preguntas-container {
+  background-color: #0e0e0e; /* fondo oscuro para mantener el estilo */
+  color: #fff;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* Título principal */
+.titulo-preguntas {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #ff1a1a;
+  display: inline-block;
+  padding-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+/* Cada bloque de pregunta */
+.pregunta {
+  margin-bottom: 25px;
+  padding: 15px 20px;
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/* Cambio leve al pasar el mouse */
+.pregunta:hover {
+  background-color: #222222;
+}
+
+/* Título de la pregunta */
+.pregunta-titulo {
+  font-size: 1.2rem;
+  color: #ff1a1a;
+  margin-bottom: 8px;
+}
+
+/* Texto de la respuesta */
+.pregunta-respuesta {
+  color: #cccccc;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}

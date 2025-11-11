@@ -9,6 +9,7 @@ import { Nosotros } from './pages/nosotros/nosotros';
 import { Consola } from './pages/consola/consola';
 import { Pc } from './pages/pc/pc';
 import { Carousel } from './pages/carousel/carousel';
+import { Preguntas } from './pages/preguntas/preguntas';
 
 export const routes: Routes = [
 {path: "", component: Home },
@@ -21,7 +22,8 @@ export const routes: Routes = [
 {path: 'nosotros', component: Nosotros},
 {path: 'consola', component: Consola},
 {path: 'pc', component: Pc },
-{path: 'carousel', component: Carousel }
+{path: 'carousel', component: Carousel },
+{path: 'preguntas', component: Preguntas }
 ]
 
 
