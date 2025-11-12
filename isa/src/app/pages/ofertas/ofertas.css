@@ -1,53 +1,74 @@
-/* Contenedor general de todas las ofertas */
-.ofertas-container {
-  display: flex;
-  flex-direction: column; /* pone uno abajo del otro */
-  gap: 40px; /* separa los bloques */
-  padding: 30px;
-  background-color: #0e0e0e; /* fondo oscuro */
-}
-
-/* Título de cada sección de oferta */
-.oferta-titulo {
-  color: white;
-  font-size: 1.6rem;
-  text-align: center;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-/* Caja de la oferta (donde va la imagen) */
-.oferta-box {
-  position: relative; /* para poder ubicar el cartel de oferta encima */
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 8px;
-  overflow: hidden; /* corta lo que sobresalga */
-  transition: transform 0.3s ease; /* pequeña animación al pasar el mouse */
-}
-
-/* Imagen de la oferta */
-.oferta-box img {
+.promo-banner {
+  position: relative;
   width: 100%;
-  height: 350px;
-  object-fit: cover; /* mantiene la proporción sin deformar */
-  opacity: 0.95; /* leve transparencia para que no se vea tan saturada */
+  max-width: 900px;
+  margin: 30px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto leve al pasar el mouse (solo se levanta un poco) */
-.oferta-box:hover {
+.promo-banner:hover {
   transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
 }
 
-/* Cartel rojo de "OFERTA" */
-.offer-badge {
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.banner-overlay {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
-  background-color: #ff1a1a;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
   color: white;
-  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
+.discount-tag {
+  background: rgba(0, 123, 255, 0.9);
   padding: 6px 12px;
-  border-radius: 5px;
+  border-radius: 8px;
+  font-weight: bold;
   font-size: 0.9rem;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.banner-text {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 15px;
+  max-width: 500px;
+}
+
+.banner-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: background 0.3s;
+  width: fit-content;
+}
+
+.banner-btn:hover {
+  background: #0056b3;
 }
