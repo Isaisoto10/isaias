@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Galeria } from '../galeria/galeria';
 
-@Component({
-  selector: 'app-consola',
-  imports: [],
-  templateUrl: './consola.html',
-  styleUrl: './consola.css',
-})
 export class Consola {
+  productosConsola: any[]; // declarás la variable
 
+  constructor() {
+    const galeria = new Galeria();
+    this.productosConsola = galeria.productos.filter(
+      (p) => p.categoria === 'ps4' || p.categoria === 'ps5'
+    );
+  }
 }
