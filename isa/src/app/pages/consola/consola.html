@@ -1,7 +1,15 @@
-@for (item of productosConsola; track $index) {
-  <div class="product-card">
-    <img [src]="item.imagen" alt="{{ item.titulo }}">
-    <h3>{{ item.titulo }}</h3>
-    <p>{{ item.precio }}</p>
+<div class="card-container">
+  <div class="product-card" *ngFor="let item of productos">
+    <div>
+      <p>{{ item.categoria }}</p>
+    </div>
+    <div class="image-container">
+      <img [src]="item.imagen" [alt]="item.titulo">
+      <button class="buy-btn">Añadir al carrito</button>
+    </div>
+    <div class="info">
+      <h3>{{ item.titulo }}</h3>
+      <p class="price">{{ item.precio }}</p>
+    </div>
   </div>
-}
+</div>
