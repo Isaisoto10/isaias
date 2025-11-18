@@ -193,7 +193,7 @@
   position: absolute;
 }
 
-/* ===== EFECTO DE FADE (opcional) =====
+/* 
    - Permite que el carrusel tenga una transición de fundido entre slides.
 */
 .carousel.fade .carousel-item {
