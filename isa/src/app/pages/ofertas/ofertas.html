@@ -1,29 +1,41 @@
-<!-- Archivo: galeria.html
-     Descripción:
-       Vista de la galería de productos. Muestra una lista de tarjetas de producto.
-       Comentarios sencillos para entender cada bloque.
--->
 
-<div class="card-container">
-  <!-- Contenedor principal que agrupa todas las tarjetas de productos -->
+<!-- Carousel 1 -->
+<div class="offer-banner">
+  <!-- Imagen del banner: ocupa todo el ancho del contenedor -->
+  <img src="../../../assets/pcyconsola.jpg" alt="Ofertas">
+  <!-- Texto que se muestra encima de la imagen -->
+  <div class="offer-text">
+    <!-- Etiqueta pequeña que muestra el descuento -->
+    <span class="badge bg-primary">Hasta -80%</span>
+    <!-- Título del banner -->
+    <h2>Ofertas</h2>
+    <!-- Breve descripción de la promoción -->
+    <p>Descuentos exclusivos por tiempo limitado y promociones semanales.</p>
+    <!-- Enlace/llamada a la acción -->
+    <a href="#">Ahorrar ahora</a>
+  </div>
+</div>
 
-  <div class="product-card" *ngFor="let item of productos">
-    <!-- Cada tarjeta de producto se repite usando *ngFor sobre la lista 'productos' -->
+<!-- Carousel 2 -->
+<div class="offer-banner">
+  <!-- Imagen para el banner de PC -->
+  <img src="../../../assets/mc.webp" alt="Ofertas Minecraft">
+  <div class="offer-text">
+    <span class="badge bg-primary">Hasta -70%</span>
+    <h2>Ofertas De Pc</h2>
+    <p>Descuentos exclusivos por tiempo limitado y promociones semanales.</p>
+    <a href="#">Ahorrar ahora</a>
+  </div>
+</div>
 
-    <div class="image-container">
-      <!-- Contenedor de la imagen y el botón de compra -->
-      <img [src]="item.imagen" [alt]="item.titulo">
-      <!-- Imagen del producto: la URL viene de item.imagen y el alt del título para accesibilidad -->
-      <button class="buy-btn">Añadir al carrito</button>
-      <!-- Botón para añadir el producto al carrito (se puede conectar a una acción en el componente) -->
-    </div>
-
-    <div class="info">
-      <!-- Bloque con la información del producto (título y precio) -->
-      <h3>{{ item.titulo }}</h3>
-      <!-- Título del producto -->
-      <p class="price">{{ item.precio }}</p>
-      <!-- Precio del producto -->
-    </div>
+<!-- Carousel 3 -->
+<div class="offer-banner">
+  <!-- Imagen para el banner de consolas -->
+  <img src="../../../assets/microsoft-sony-2602913.webp" alt="Ofertas Xbox">
+  <div class="offer-text">
+    <span class="badge bg-primary">Hasta -75%</span>
+    <h2>Ofertas De Consolas</h2>
+    <p>Descuentos exclusivos por tiempo limitado y promociones semanales.</p>
+    <a href="#">Ahorrar ahora</a>
   </div>
 </div>

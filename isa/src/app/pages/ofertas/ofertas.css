@@ -1,103 +1,84 @@
+/* Archivo: ofertas.css
+   Descripción:
+     Estilos para los banners de la página de ofertas.
+     Comentarios sencillos en español que explican cada bloque.
+*/
 
- /* Contenedor del banner:
-    - position: relative para permitir superponer la capa de texto (.banner-overlay).
-    - max-width y margin centran el banner y limitan su ancho.
-    - border-radius y overflow: hidden recortan los bordes redondeados.
-    - box-shadow da profundidad.
-    - transition permite animar transform y sombra al pasar el ratón. */
-.promo-banner {
-  position: relative;
+/* Contenedor del banner:
+   - position: relative para poder colocar texto encima de la imagen.
+   - max-width y margin lo centran y limitan el ancho.
+   - border-radius y overflow: hidden recortan la imagen con esquinas redondeadas. */
+.offer-banner {
+  position: relative; /* para poner texto encima */
   width: 100%;
-  max-width: 900px;
-  margin: 30px auto;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efecto al pasar el ratón:
-   - escala ligeramente el banner y aumenta la sombra para destacar. */
-.promo-banner:hover {
-  transform: scale(1.02);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+  max-width: 900px; /* no se hace gigante */
+  margin: 30px auto; /* lo centra y separa */
+  border-radius: 18px; /* borde redondeado */
+  overflow: hidden; /* recorta lo que desborda */
 }
 
 /* Imagen del banner:
-   - ocupa todo el espacio del contenedor.
-   - object-fit: cover hace que la imagen recorte y llene el área sin deformarse. */
-.banner-img {
+   - height fija para que todos los banners tengan la misma altura.
+   - object-fit: cover hace que la imagen llene el contenedor sin deformarse.
+   - filter oscurece la imagen para mejorar lectura del texto encima. */
+.offer-banner img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  height: 230px; /* podés cambiarlo */
+  object-fit: cover; /* no se deforma */
+  filter: brightness(0.65); /* la oscurezco un poco */
 }
 
-/* Capa de texto encima de la imagen:
-   - position: absolute para colocarse sobre la imagen.
-   - background con degradado oscurece parte de la imagen y mejora contraste del texto.
-   - display:flex y padding centran y separan el contenido. */
-.banner-overlay {
+/* Bloque de texto encima de la imagen:
+   - position: absolute para ubicar el texto dentro del banner.
+   - top/left definen la separación desde la esquina.
+   - display:flex y flex-direction: column organizan los elementos en columna. */
+.offer-text {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
-  color: white;
+  top: 20px; /* lo bajo un poquito */
+  left: 20px; /* y lo corro a la izq */
+  color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 40px;
+  gap: 5px;
 }
 
-/* Etiqueta de descuento:
-   - fondo azul semitransparente, padding y bordes redondeados.
-   - tamaño de fuente pequeño y negrita para destacarla. */
-.discount-tag {
-  background: rgba(0, 123, 255, 0.9);
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 0.9rem;
-  margin-bottom: 10px;
+/* Estilo de la 'badge' o etiqueta de descuento:
+   - padding y border-radius para apariencia de etiqueta.
+   - font-size pequeño para que no robe atención al título. */
+.badge {
+  padding: 4px 8px; /* ajuste del padding */
+  font-size: 12px;
+  border-radius: 10px;
   width: fit-content;
+  display: inline-block;
 }
 
-/* Título grande del banner:
-   - tamaño y peso para que sea el elemento más visible. */
-.banner-title {
-  font-size: 2.5rem;
+/* Título principal dentro del texto:
+   - tamaño grande y peso para destacarlo en el banner. */
+.offer-text h2 {
+  margin: 0;
+  font-size: 28px;
   font-weight: bold;
-  margin: 5px 0;
 }
 
 /* Texto descriptivo:
-   - color más claro para diferenciar del título.
-   - max-width limita el ancho para mejor lectura. */
-.banner-text {
-  font-size: 1.1rem;
-  color: #ddd;
-  margin-bottom: 15px;
-  max-width: 500px;
+   - tamaño mediano y opacidad para diferenciación visual. */
+.offer-text p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
 }
 
-/* Botón del banner:
-   - fondo azul, texto blanco y bordes redondeados para estilo llamativo.
-   - transition para suavizar cambio de color al pasar el ratón. */
-.banner-btn {
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 22px;
-  border-radius: 30px;
+/* Enlace de acción (call to action):
+   - color contrastante y estilo sin subrayado por defecto.
+   - al pasar el ratón se subraya para indicar que es clicable. */
+.offer-text a {
+  margin-top: 6px;
+  color: #93c7ff;
   font-weight: bold;
-  transition: background 0.3s;
-  width: fit-content;
+  text-decoration: none;
 }
 
-/* Hover del botón:
-   - oscurece el botón para indicar interacción. */
-.banner-btn:hover {
-  background: #0056b3;
+.offer-text a:hover {
+  text-decoration: underline;
 }

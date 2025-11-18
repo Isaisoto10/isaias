@@ -1,64 +1,65 @@
-<!-- Archivo: app.html
-     Descripción:
-       Plantilla principal de la aplicación. Contiene la barra de navegación,
-       un carrusel de imágenes, el espacio para las páginas (router-outlet)
-       y el pie de página. Los comentarios son sencillos para entender cada bloque.
--->
 
 <div id="container">
-  <!-- Contenedor principal de la aplicación -->
+  <!-- Contenedor principal de toda la aplicación: agrupa la cabecera, contenido y pie. -->
 
-  <!-- Barra de navegación -->
+  <!-- BARRA DE NAVEGACIÓN -->
+  <!-- Muestra el logo y los enlaces a las distintas páginas del sitio -->
   <nav class="navbar navbar-expand-lg" id="nav">
     <div class="container-fluid">
-      <!-- Marca / nombre del sitio -->
-      <a class="navbar-brand" href="#" style="color: #669bbc;">Gzmes</a>
+      <!-- Marca / logo -->
+      <a class="navbar-brand" href="#" style="color: #669bbc;">
+        <!-- Imagen del logo: sirve como marca visual y enlace a la home (aquí #). -->
+        <img src="../assets/logo.png" alt="Gzmes Logo" width="50" height="50" class="d-inline-block align-text-top">
+      </a>
 
       <div class="container2">
-        <!-- Botón que muestra/oculta el menú en pantallas pequeñas -->
+        <!-- Botón para mostrar/ocultar el menú en pantallas pequeñas -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- Icono del toggle: aparece en móviles para abrir el menú -->
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Enlaces del menú (se colapsan en móvil) -->
+        <!-- Enlaces del menú (se ocultan en móvil y se muestran al abrir el toggle) -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <!-- Enlace a Home -->
+            <!-- Cada <li> es una opción del menú que lleva a una ruta distinta -->
             <li class="nav-item">
+              <!-- Enlace a Home -->
               <a class="nav-link active" aria-current="page" href="home">Home</a>
             </li>
 
-            <!-- Enlace a Nosotros -->
             <li class="nav-item">
+              <!-- Enlace a Nosotros (quiénes somos) -->
               <a class="nav-link" href="nosotros">Nosotros</a>
             </li>
 
-            <!-- Menú desplegable para Galería y subcategorías -->
+            <!-- Menú desplegable: agrupa enlaces relacionados (Galería y subcategorías) -->
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="galeria" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false">
                 Galería
               </a>
               <ul class="dropdown-menu">
+                <!-- Links dentro del dropdown: Productos, PC, Consolas -->
                 <li><a class="dropdown-item" href="galeria">Productos</a></li>
                 <li><a class="dropdown-item" href="pc">PC</a></li>
                 <li><a class="dropdown-item" href="consola">Consolas</a></li>
               </ul>
             </li>
 
-            <!-- Enlace a Contacto -->
             <li class="nav-item">
+              <!-- Enlace a Contacto (formulario o datos de contacto) -->
               <a class="nav-link active" aria-current="page" href="contacto">Contacto</a>
             </li>
 
-            <!-- Enlace a Ofertas -->
             <li class="nav-item">
+              <!-- Enlace a Ofertas (promociones) -->
               <a class="nav-link active" aria-current="page" href="ofertas">Ofertas</a>
             </li>
 
-            <!-- Enlace a Preguntas Frecuentes -->
             <li class="nav-item">
+              <!-- Enlace a Preguntas Frecuentes -->
               <a class="nav-link active" aria-current="page" href="preguntas">Preguntas Frecuentes</a>
             </li>
           </ul>
@@ -66,10 +67,12 @@
       </div>
     </div>
   </nav>
+  <!-- FIN BARRA DE NAVEGACIÓN -->
 
-  <!-- Carrusel de imágenes -->
+  <!-- CARRUSEL DE IMÁGENES -->
+  <!-- Muestra imágenes grandes que rotan; útil para destacar promociones o contenido -->
   <div id="carouselExampleIndicators" class="carousel slide">
-    <!-- Indicadores (puntos) del carrusel -->
+    <!-- Indicadores: pequeños botones/puntos que indican la diapositiva actual -->
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
         aria-current="true" aria-label="Slide 1"></button>
@@ -79,9 +82,9 @@
         aria-label="Slide 3"></button>
     </div>
 
-    <!-- Elementos del carrusel -->
+    <!-- Slides del carrusel: cada .carousel-item contiene una imagen -->
     <div class="carousel-inner">
-      <!-- Primera imagen (activa al inicio) -->
+      <!-- Primera imagen (activa al cargar la página) -->
       <div class="carousel-item active">
         <img src="../assets/personajes-videojuego-iconicos-ultimos-25-anos-4346364.webp" class="d-block w-100"
           alt="img1" height="500px" width="400px">
@@ -100,7 +103,7 @@
       </div>
     </div>
 
-    <!-- Controles para ir a la imagen anterior/siguiente -->
+    <!-- Controles anteriores/siguientes: permiten navegar manualmente entre imágenes -->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
       data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -112,25 +115,25 @@
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  <!-- Fin del carrusel -->
+  <!-- FIN CARRUSEL -->
 
-  <!--<app-carousel></app-carousel>--> <!-- Componente de carrusel alternativo (comentado) -->
-
-  <!-- Espacio donde Angular carga las páginas según la ruta -->
+  <!-- ESPACIO PARA CONTENIDO DINÁMICO -->
+  <!-- Angular inserta aquí el contenido de cada página según la ruta (home, galería, contacto, etc.) -->
   <router-outlet></router-outlet>
 
-  <!-- Pie de página -->
+  <!-- PIE DE PÁGINA (FOOTER) -->
   <footer class="bg-dark text-white text-center text-lg-start mt-auto py-4">
     <div class="container">
       <div class="row align-items-center">
-        <!-- Columna izquierda: información del sitio / autor -->
+        <!-- Columna izquierda: nombre del sitio o autor -->
         <div class="col-lg-6 mb-3 mb-lg-0">
           <h5 class="fw-bold">Mi Sitio Web</h5>
           <p class="mb-0">Isaias Soto</p>
         </div>
 
-        <!-- Columna derecha: iconos / enlaces a redes y contacto -->
+        <!-- Columna derecha: enlaces a redes sociales y contacto rápido -->
         <div class="col-lg-6 text-lg-end">
+          <!-- Cada <a> abre la red social correspondiente en una nueva pestaña -->
           <a href="https://facebook.com" target="_blank" class="text-white me-3">
             <i class="bi bi-facebook fs-4"></i>
           </a>
@@ -146,15 +149,14 @@
         </div>
       </div>
 
-      <!-- Línea separadora -->
+      <!-- Línea separadora para separar contenido del footer -->
       <hr class="border-light my-3" />
-      <!-- Texto de derechos -->
+      <!-- Texto de derechos (copyright) -->
       <p class="mb-0 small">
         &copy; 2025 Mi Sitio Web. Todos los derechos reservados.
       </p>
     </div>
   </footer>
-  <!-- Fin del pie de página -->
+  <!-- FIN PIE DE PÁGINA -->
 </div>
-```// filepath: c:\Users\isaias\Downloads\isaias\isa\src\app\app.html
 <!-- Fin del contenedor principal -->

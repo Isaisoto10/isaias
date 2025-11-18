@@ -1,8 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-ofertas',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './ofertas.html',
   styleUrl: './ofertas.css',
 })
