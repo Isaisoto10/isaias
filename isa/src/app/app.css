@@ -1,15 +1,28 @@
+/* Archivo: app.css
+   Descripción:
+     Estilos globales de la aplicación. Aquí se define el fondo principal,
+     la apariencia del navbar, el carrusel y algunos detalles visuales.
+     Comentarios en español sencillo para entender cada bloque.
+*/
+
+ /* Fondo del contenedor principal:
+    - Cambia el color de fondo de toda la app.
+*/
 #container {
     background-color: #14213d;
 }
 
-/* Estilo general del navbar */
+/* ===== NAVBAR (barra de navegación) ===== */
+/* Estilo general del navbar: fondo oscuro y fuente. */
 .navbar {
   background-color: #0b0d1a; /* fondo oscuro elegante */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   font-family: 'Poppins', sans-serif;
 }
 
-/* Enlaces del navbar */
+/* Enlaces del navbar:
+   - color, tamaño y separación entre enlaces.
+*/
 .navbar .nav-link {
   color: #dcdcdc;
   font-weight: 400;
@@ -19,20 +32,27 @@
   transition: color 0.3s ease;
 }
 
-/* Hover y enlace activo */
+/* Hover y enlace activo:
+   - cuando pasas el ratón o el enlace está activo se aclara y añade sombra.
+*/
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
   color: #ffffff;
   text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
-/* Dropdown */
+/* Menú desplegable (dropdown):
+   - fondo y borde para el menú que aparece al abrir el dropdown.
+*/
 .navbar .dropdown-menu {
   background-color: #14162b;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
 }
 
+/* Elementos dentro del dropdown:
+   - color y efecto suave al pasar el ratón.
+*/
 .navbar .dropdown-item {
   color: #cfcfcf;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -43,16 +63,20 @@
   color: #fff;
 }
 
-/* Botón toggle (vista móvil) */
+/* Botón para mostrar/ocultar el navbar en móvil:
+   - quitar borde por defecto para un estilo más limpio. */
 .navbar-toggler {
   border: none;
 }
 
+/* Icono del toggle:
+   - invertir colores para que se vea sobre fondo oscuro. */
 .navbar-toggler-icon {
   filter: invert(1);
 }
 
-/* Input de búsqueda */
+/* Input de búsqueda dentro del navbar:
+   - fondo oscuro, borde suave y texto claro. */
 .navbar .form-control {
   background-color: #1c1e30;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -60,21 +84,122 @@
   border-radius: 6px;
 }
 
+/* Color del placeholder (texto guía) dentro del input. */
 .navbar .form-control::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
 
+/* Botón de búsqueda con estilo outline:
+   - color y borde para que combine con el navbar. */
 .navbar .btn-outline-success {
   color: #fff;
   border-color: rgba(255, 255, 255, 0.3);
 }
 
+/* Hover del botón de búsqueda: color vivo para indicar acción. */
 .navbar .btn-outline-success:hover {
   background-color: #00b894;
   border-color: #00b894;
   color: #fff;
 }
 
+/* Ajuste de margen para contenedor secundario dentro del navbar.
+   - Se usa !important para forzar el posicionamiento deseado. */
 .container2{
     margin-left: 20rem !important;
+}
+
+/* ===== CAROUSEL (carrusel de imágenes) ===== */
+
+/* Contenedor del carrusel:
+   - ancho máximo, centrado, bordes redondeados y sombra.
+*/
+#carouselExampleIndicators {
+  max-width: 800px;
+  margin: 50px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Transición suave entre slides para animaciones agradables. */
+.carousel-item {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* Imágenes dentro del carrusel:
+   - bordes redondeados y filtros para mejorar el contraste.
+*/
+.carousel-item img {
+  border-radius: 15px;
+  filter: brightness(0.9) contrast(1.1);
+  transition: transform 0.8s ease, filter 0.8s ease;
+}
+
+/* Efecto al pasar el ratón sobre la imagen: zoom ligero. */
+.carousel-item img:hover {
+  transform: scale(1.05);
+  filter: brightness(1);
+}
+
+/* Indicadores (los puntos que indican la slide actual):
+   - estilo personalizado para que se vean mejor.
+*/
+.carousel-indicators [data-bs-target] {
+  background-color: #ddd;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Indicador activo más grande y de color distinto para destacar. */
+.carousel-indicators .active {
+  background-color: #ff6f61;
+  width: 16px;
+  height: 16px;
+}
+
+/* Iconos de control (prev/next):
+   - fondo semitransparente y forma redonda.
+*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: 60%;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover sobre los iconos: cambio de color y pequeño escalado. */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(255, 111, 97, 0.9);
+  transform: scale(1.1);
+}
+
+/* Sombra detrás de los botones de control para dar profundidad. */
+.carousel-control-prev,
+.carousel-control-next {
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Clase para texto accesible pero oculto visualmente:
+   - se usa para lectores de pantalla (mejora accesibilidad). */
+.visually-hidden {
+  position: absolute;
+}
+
+/* ===== EFECTO DE FADE (opcional) =====
+   - Permite que el carrusel tenga una transición de fundido entre slides.
+*/
+.carousel.fade .carousel-item {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.carousel.fade .carousel-item.active {
+  opacity: 1;
 }

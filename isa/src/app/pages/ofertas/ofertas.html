@@ -1,31 +1,29 @@
-<div class="promo-banner">
-  <img src="../../../assets/pcyconsola.jpg" alt="Ofertas" class="banner-img">
+<!-- Archivo: galeria.html
+     Descripción:
+       Vista de la galería de productos. Muestra una lista de tarjetas de producto.
+       Comentarios sencillos para entender cada bloque.
+-->
 
-  <div class="banner-overlay">
-    <span class="discount-tag">Hasta -70%</span>
-    <h2 class="banner-title">Ofertas</h2>
-    <p class="banner-text">Descuentos exclusivos por tiempo limitado y promociones semanales.</p>
-    <button class="banner-btn">Ahorrar ahora</button>
+<div class="card-container">
+  <!-- Contenedor principal que agrupa todas las tarjetas de productos -->
+
+  <div class="product-card" *ngFor="let item of productos">
+    <!-- Cada tarjeta de producto se repite usando *ngFor sobre la lista 'productos' -->
+
+    <div class="image-container">
+      <!-- Contenedor de la imagen y el botón de compra -->
+      <img [src]="item.imagen" [alt]="item.titulo">
+      <!-- Imagen del producto: la URL viene de item.imagen y el alt del título para accesibilidad -->
+      <button class="buy-btn">Añadir al carrito</button>
+      <!-- Botón para añadir el producto al carrito (se puede conectar a una acción en el componente) -->
+    </div>
+
+    <div class="info">
+      <!-- Bloque con la información del producto (título y precio) -->
+      <h3>{{ item.titulo }}</h3>
+      <!-- Título del producto -->
+      <p class="price">{{ item.precio }}</p>
+      <!-- Precio del producto -->
+    </div>
   </div>
 </div>
-<div class="promo-banner">
-  <img src="../../../assets/mc.webp" alt="Ofertas" class="banner-img">
-
-  <div class="banner-overlay">
-    <span class="discount-tag">Hasta -60%</span>
-    <h2 class="banner-title">Ofertas de PC</h2>
-    <p class="banner-text">Descuentos exclusivos por tiempo limitado y promociones semanales.</p>
-    <button class="banner-btn">Ahorrar ahora</button>
-  </div>
-</div>
-<div class="promo-banner">
-  <img src="../../../assets/microsoft-sony-2602913.webp" alt="Ofertas" class="banner-img">
-
-  <div class="banner-overlay">
-    <span class="discount-tag">Hasta -55%</span>
-    <h2 class="banner-title">Ofertas de Consolas</h2>
-    <p class="banner-text">Descuentos exclusivos por tiempo limitado y promociones semanales.</p>
-    <button class="banner-btn">Ahorrar ahora</button>
-  </div>
-</div>
-

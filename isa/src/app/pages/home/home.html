@@ -1,17 +1,33 @@
+<!-- Archivo: home.html
+     Descripción:
+       Página principal con una selección de productos destacados.
+       Comentarios en español sencillo que explican cada bloque de la plantilla.
+-->
 
-<div class="card-container">    
-    <div class="product-card">
+<div class="card-container">
+  <!-- Contenedor principal que agrupa todas las tarjetas de producto -->
+    
+  <div class="product-card">
+    <!-- Tarjeta de producto individual -->
     <div class="image-container">
+      <!-- Contenedor de la imagen y botón -->
       <img src="../../../assets/spidermanps5.png" alt="spidermanps5">
+      <!-- Imagen del producto: src apunta al archivo en assets, alt ayuda a accesibilidad -->
       <button class="buy-btn">Añadir al carrito</button>
+      <!-- Botón para añadir al carrito (pendiente de conectar la acción en el componente) -->
     </div>
     <div class="info">
+      <!-- Información del producto: título y precio -->
       <h3>Marvel´s SpiderMan Remastered PS5</h3>
+      <!-- Nombre del producto -->
       <p class="price">$ 30.000,00</p>
+      <!-- Precio mostrado tal cual (puedes formatearlo con pipes si quieres) -->
     </div>
   </div>
+  <!-- Fin tarjeta -->
 
   <div class="product-card">
+    <!-- Otra tarjeta: misma estructura que la anterior -->
     <div class="image-container">
       <img src="../../../assets/PS43.png" alt="spidermanps5">
       <button class="buy-btn">Añadir al carrito</button>
@@ -23,6 +39,7 @@
   </div>
 
   <div class="product-card">
+    <!-- Tarjeta con Silent Hill 2 -->
     <div class="image-container">
       <img src="../../../assets/PS513.png" alt="Silenthill2">
       <button class="buy-btn">Añadir al carrito</button>
@@ -33,7 +50,8 @@
     </div>
   </div>
 
-   <div class="product-card">
+  <div class="product-card">
+    <!-- Tarjeta con Elden Ring -->
     <div class="image-container">
       <img src="../../../assets/eldenringshadown.png" alt="eldenringshadown">
       <button class="buy-btn">Añadir al carrito</button>
@@ -45,54 +63,54 @@
   </div>
 
   <div class="product-card">
-        <div class="image-container">
-            <img src="../../../assets/dispatch.png" alt="dispatch">
-            <button class="buy-btn">Añadir al carrito</button>
-        </div>
-        <div class="info">
-            <h3>Dispatch Deluxe Edition PC Steam </h3>
-            <p class="price">$ 3.350,00</p>
-
-        </div>
+    <!-- Tarjeta PC: Dispatch -->
+    <div class="image-container">
+      <img src="../../../assets/dispatch.png" alt="dispatch">
+      <button class="buy-btn">Añadir al carrito</button>
     </div>
-
-    <div class="product-card">
-        <div class="image-container">
-            <img src="../../../assets/sparkingzero.png" alt="sparkingzero">
-            <button class="buy-btn">Añadir al carrito</button>
-        </div>
-        <div class="info">
-            <h3>Dragon Ball: Sparking! Zero Ultimate Edition PC Steam</h3>
-            <p class="price">$ 5.999,00</p>
-
-        </div>
+    <div class="info">
+      <h3>Dispatch Deluxe Edition PC Steam</h3>
+      <p class="price">$ 3.350,00</p>
     </div>
+  </div>
 
-    <div class="product-card">
-        <div class="image-container">
-            <img src="../../../assets/thelastofus2.png" alt="thelastofus2">
-            <button class="buy-btn">Añadir al carrito</button>
-        </div>
-        <div class="info">
-            <h3>The Last of Us Parte II Remastered PC Steam</h3>
-            <p class="price">$ 7.500,00</p>
-
-        </div>
+  <div class="product-card">
+    <!-- Tarjeta PC: Dragon Ball -->
+    <div class="image-container">
+      <img src="../../../assets/sparkingzero.png" alt="sparkingzero">
+      <button class="buy-btn">Añadir al carrito</button>
     </div>
-
-    <div class="product-card">
-        <div class="image-container">
-            <img src="../../../assets/eldenring2.png" alt="eldenring">
-            <button class="buy-btn">Añadir al carrito</button>
-        </div>
-        <div class="info">
-            <h3>Elden Ring Deluxe Edition PC Steam</h3>
-            <p class="price">$ 5.599,00</p>
-        </div>
+    <div class="info">
+      <h3>Dragon Ball: Sparking! Zero Ultimate Edition PC Steam</h3>
+      <p class="price">$ 5.999,00</p>
     </div>
+  </div>
 
-  
+  <div class="product-card">
+    <!-- Tarjeta PC: The Last of Us -->
+    <div class="image-container">
+      <img src="../../../assets/thelastofus2.png" alt="thelastofus2">
+      <button class="buy-btn">Añadir al carrito</button>
+    </div>
+    <div class="info">
+      <h3>The Last of Us Parte II Remastered PC Steam</h3>
+      <p class="price">$ 7.500,00</p>
+    </div>
+  </div>
 
+  <div class="product-card">
+    <!-- Tarjeta PC: Elden Ring Deluxe -->
+    <div class="image-container">
+      <img src="../../../assets/eldenring2.png" alt="eldenring">
+      <button class="buy-btn">Añadir al carrito</button>
+    </div>
+    <div class="info">
+      <h3>Elden Ring Deluxe Edition PC Steam</h3>
+      <p class="price">$ 5.599,00</p>
+    </div>
+  </div>
 
-
+  <!-- Si quieres añadir más productos:
+       - copia una de las tarjetas y cambia src, alt, título y precio.
+       - para usar datos dinámicos con Angular, convierte estas tarjetas a *ngFor con un arreglo en el componente. -->
 </div>

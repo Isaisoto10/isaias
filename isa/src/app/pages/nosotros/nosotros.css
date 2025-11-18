@@ -1,4 +1,14 @@
+/* Archivo: nosotros.css
+   Descripción:
+     Estilos para la página "Sobre Nosotros".
+     Comentarios en español sencillo para explicar qué hace cada bloque.
+*/
+
 /* ===== ESTILO GENERAL ===== */
+/* Contenedor principal de la página:
+   - define fuente, tamaño, alineado y espacios.
+   - max-width limita el ancho para que el texto sea fácil de leer.
+   - min-height asegura que la sección ocupe al menos toda la pantalla. */
 .nosotros {
   font-size: 14px;
   font-family: 'Poppins', sans-serif;
@@ -12,6 +22,10 @@
 }
 
 /* ===== IMAGEN CON BORDE RGB ===== */
+/* Contenedor que rodea la imagen:
+   - crea un borde con degradado de colores (RGB).
+   - padding y border-radius hacen que el borde se vea como marco redondeado.
+   - animation mueve el degradado para que el borde cambie suavemente. */
 .img-container {
   display: inline-block;
   padding: 8px;
@@ -22,13 +36,17 @@
   margin-bottom: 30px; /* separación con el texto */
 }
 
+/* Imagen dentro del contenedor:
+   - tamaño fijo para mantener proporción en la página.
+   - border-radius para que la imagen se adapte al marco redondeado. */
 .nosotros-img {
   width: 600px;
   border-radius: 15px;
   display: block;
 }
 
-/* Animación del borde RGB */
+/* Animación del borde RGB:
+   - mueve la posición del degradado para dar efecto de cambio de color. */
 @keyframes rgbBorder {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
@@ -36,6 +54,8 @@
 }
 
 /* ===== TÍTULO ===== */
+/* Estilo del título principal:
+   - tamaño grande y color llamativo para destacarlo sobre el fondo oscuro. */
 .nosotros h2 {
   font-size: 28px;
   margin-bottom: 20px;

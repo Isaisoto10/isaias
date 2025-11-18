@@ -1,3 +1,14 @@
+/* Archivo: consola.css
+   Descripción:
+     Estilos para la sección "Consola".
+     Comentarios sencillos en español para entender qué hace cada bloque.
+*/
+
+/* Contenedor que agrupa todas las tarjetas:
+   - usa flex para poner tarjetas en filas y que pasen a la siguiente línea.
+   - gap separa las tarjetas entre sí.
+   - padding añade espacio dentro del contenedor.
+   - max-width y margin centran el área en la página. */
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -9,6 +20,10 @@
   margin: 0 auto;
 }
 
+/* Cada tarjeta de producto:
+   - tamaño fijo para que todas sean uniformes.
+   - fondo oscuro, bordes redondeados y transición para animar efectos.
+   - cursor pointer indica que se puede interactuar. */
 .product-card {
   width: 270px;
   background-color: #1e1e1e;
@@ -19,22 +34,34 @@
   color: #fff;
 }
 
+/* Efecto al pasar el ratón sobre la tarjeta:
+   - la tarjeta crece un poco y aparece sombra para destacarla. */
 .product-card:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
 }
 
+/* Contenedor de la imagen dentro de la tarjeta:
+   - position: relative para poder poner elementos encima (como el botón).
+   - overflow: hidden evita que la imagen sobresalga de los bordes redondeados. */
 .image-container {
   position: relative;
   overflow: hidden;
 }
 
+/* Imagen del producto:
+   - ocupa todo el ancho de la tarjeta.
+   - border-radius en las esquinas superiores para que coincida con la tarjeta. */
 .image-container img {
   width: 100%;
   display: block;
   border-radius: 12px 12px 0 0;
 }
 
+/* Botón "Añadir al carrito":
+   - está encima de la imagen, centrado horizontalmente.
+   - diseño con fondo azul y texto blanco.
+   - inicialmente oculto (opacity 0) y aparece al pasar el ratón sobre la imagen. */
 .buy-btn {
   position: absolute;
   bottom: 10px;
@@ -50,14 +77,19 @@
   transition: opacity 0.3s ease;
 }
 
+/* Mostrar el botón cuando el puntero está sobre la imagen. */
 .image-container:hover .buy-btn {
   opacity: 1;
 }
 
+/* Bloque con la información del producto (título y precio):
+   - padding para separar el texto del borde de la tarjeta. */
 .info {
   padding: 10px 15px;
 }
 
+/* Título dentro de la tarjeta:
+   - tamaño y margen para que se vea claro y ordenado. */
 .info h3 {
   font-size: 14px;
   font-weight: 500;
@@ -65,6 +97,8 @@
   line-height: 1.4;
 }
 
+/* Estilo del precio:
+   - color llamativo para que destaque dentro de la tarjeta. */
 .price {
   color: #00ffcc;
   font-weight: 600;

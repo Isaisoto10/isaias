@@ -1,15 +1,35 @@
+<!-- Archivo: contacto.html
+     Descripción:
+       Página de contacto con formulario y datos de contacto.
+       Comentarios sencillos en español para entender cada bloque.
+-->
+
 <div class="container mt-5 mb-5">
+  <!-- Contenedor principal que centra el contenido y añade espacio arriba/abajo -->
+
   <div class="row justify-content-center">
+    <!-- Fila de Bootstrap que centra horizontalmente la columna interior -->
     <div class="col-lg-8">
+      <!-- Columna que limita el ancho del formulario en pantallas grandes -->
+
       <div class="card shadow-lg border-0 rounded-4">
+        <!-- Tarjeta visual que agrupa el formulario (sombra y bordes redondeados) -->
         <div class="card-body p-4">
+          <!-- Cuerpo de la tarjeta con padding -->
+
           <h2 class="text-center mb-4 text-primary">Contáctanos</h2>
+          <!-- Título centrado de la sección -->
+
           <p class="text-center text-muted mb-4">
             Si tenés alguna duda o querés comunicarte con nosotros, completá el formulario y te responderemos a la brevedad 
           </p>
+          <!-- Texto breve que explica para qué sirve el formulario -->
 
           <form>
+            <!-- Formulario principal. Actualmente no tiene binding Angular, es HTML básico. -->
+
             <div class="mb-3">
+              <!-- Campo para el nombre completo -->
               <label for="nombre" class="form-label fw-bold">Nombre completo</label>
               <input
                 type="text"
@@ -21,6 +41,7 @@
             </div>
 
             <div class="mb-3">
+              <!-- Campo para el correo electrónico -->
               <label for="email" class="form-label fw-bold">Correo electrónico</label>
               <input
                 type="email"
@@ -32,6 +53,7 @@
             </div>
 
             <div class="mb-3">
+              <!-- Campo para el asunto del mensaje -->
               <label for="asunto" class="form-label fw-bold">Asunto</label>
               <input
                 type="text"
@@ -42,6 +64,7 @@
             </div>
 
             <div class="mb-3">
+              <!-- Campo de texto para el mensaje -->
               <label for="mensaje" class="form-label fw-bold">Mensaje</label>
               <textarea
                 class="form-control"
@@ -53,29 +76,38 @@
             </div>
 
             <div class="text-center">
+              <!-- Botón para enviar el formulario -->
               <button type="submit" class="btn btn-primary px-5 py-2">
                 Enviar mensaje
               </button>
             </div>
           </form>
+          <!-- Fin del formulario -->
         </div>
       </div>
 
-      <!-- Información de contacto -->
+      <!-- Información de contacto debajo de la tarjeta -->
       <div class="text-center mt-4">
         <p class="mb-1" style="color: white;">
+          <!-- Email de contacto -->
           <i class="bi bi-envelope-fill text-primary me-2"></i>
           contacto@tumarca.com
         </p>
+
         <p class="mb-1" style="color: white;">
+          <!-- Teléfono de contacto -->
           <i class="bi bi-telephone-fill text-primary me-2"></i>
           +54 9 299 1234-5678
         </p>
+
         <p style="color: white;">
+          <!-- Dirección o ubicación -->
           <i class="bi bi-geo-alt-fill text-primary me-2"></i>
           Buenos Aires, Argentina
         </p>
       </div>
+      <!-- Fin de la sección de información de contacto -->
     </div>
   </div>
 </div>
+<!-- Fin del contenedor principal -->

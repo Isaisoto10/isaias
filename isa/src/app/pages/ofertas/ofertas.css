@@ -1,3 +1,10 @@
+
+ /* Contenedor del banner:
+    - position: relative para permitir superponer la capa de texto (.banner-overlay).
+    - max-width y margin centran el banner y limitan su ancho.
+    - border-radius y overflow: hidden recortan los bordes redondeados.
+    - box-shadow da profundidad.
+    - transition permite animar transform y sombra al pasar el ratón. */
 .promo-banner {
   position: relative;
   width: 100%;
@@ -9,11 +16,16 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Efecto al pasar el ratón:
+   - escala ligeramente el banner y aumenta la sombra para destacar. */
 .promo-banner:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
 }
 
+/* Imagen del banner:
+   - ocupa todo el espacio del contenedor.
+   - object-fit: cover hace que la imagen recorte y llene el área sin deformarse. */
 .banner-img {
   width: 100%;
   height: 100%;
@@ -21,6 +33,10 @@
   display: block;
 }
 
+/* Capa de texto encima de la imagen:
+   - position: absolute para colocarse sobre la imagen.
+   - background con degradado oscurece parte de la imagen y mejora contraste del texto.
+   - display:flex y padding centran y separan el contenido. */
 .banner-overlay {
   position: absolute;
   top: 0;
@@ -35,6 +51,9 @@
   padding: 40px;
 }
 
+/* Etiqueta de descuento:
+   - fondo azul semitransparente, padding y bordes redondeados.
+   - tamaño de fuente pequeño y negrita para destacarla. */
 .discount-tag {
   background: rgba(0, 123, 255, 0.9);
   padding: 6px 12px;
@@ -45,12 +64,17 @@
   width: fit-content;
 }
 
+/* Título grande del banner:
+   - tamaño y peso para que sea el elemento más visible. */
 .banner-title {
   font-size: 2.5rem;
   font-weight: bold;
   margin: 5px 0;
 }
 
+/* Texto descriptivo:
+   - color más claro para diferenciar del título.
+   - max-width limita el ancho para mejor lectura. */
 .banner-text {
   font-size: 1.1rem;
   color: #ddd;
@@ -58,6 +82,9 @@
   max-width: 500px;
 }
 
+/* Botón del banner:
+   - fondo azul, texto blanco y bordes redondeados para estilo llamativo.
+   - transition para suavizar cambio de color al pasar el ratón. */
 .banner-btn {
   background: #007bff;
   color: white;
@@ -69,6 +96,8 @@
   width: fit-content;
 }
 
+/* Hover del botón:
+   - oscurece el botón para indicar interacción. */
 .banner-btn:hover {
   background: #0056b3;
 }

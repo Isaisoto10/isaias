@@ -1,3 +1,17 @@
+/* Archivo: pc.css
+   Descripción:
+     Estilos para la página "PC". Aquí se define cómo se ven las tarjetas de juegos,
+     la imagen, el botón de añadir al carrito y los textos (título y precio).
+     Comentarios en español sencillo para entender cada bloque.
+*/
+
+/* Contenedor que agrupa todas las tarjetas:
+   - usa flex para poner las tarjetas en filas y que salten a la próxima línea.
+   - gap separa las tarjetas entre sí.
+   - justify-content centra el conjunto.
+   - padding añade espacio interior.
+   - background-color da el fondo oscuro de la sección.
+   - max-width y margin centran el contenedor dentro de la página. */
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -9,6 +23,12 @@
   margin: 0 auto;
 }
 
+/* Cada tarjeta de producto:
+   - ancho fijo para que todas tengan el mismo tamaño.
+   - fondo oscuro y bordes redondeados.
+   - overflow hidden para recortar lo que sobresalga.
+   - transition para animar transform y sombra al pasar el ratón.
+   - cursor pointer para indicar que se puede interactuar. */
 .product-card {
   width: 270px;
   background-color: #1e1e1e;
@@ -19,22 +39,35 @@
   color: #fff;
 }
 
+/* Efecto al pasar el ratón sobre la tarjeta:
+   - escala un poco la tarjeta y agrega sombra para destacarla. */
 .product-card:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
 }
 
+/* Contenedor de la imagen dentro de la tarjeta:
+   - position relative para poder posicionar el botón encima.
+   - overflow hidden para evitar que la imagen sobresalga fuera del borde redondeado. */
 .image-container {
   position: relative;
   overflow: hidden;
 }
 
+/* Imagen del producto:
+   - ocupa todo el ancho de la tarjeta.
+   - display block para evitar espacios en línea.
+   - los bordes superiores se redondean para coincidir con la tarjeta. */
 .image-container img {
   width: 100%;
   display: block;
   border-radius: 12px 12px 0 0;
 }
 
+/* Botón "Añadir al carrito":
+   - está posicionado sobre la imagen, centrado horizontalmente.
+   - diseño con fondo azul, texto blanco y bordes redondeados.
+   - inicialmente oculto (opacity 0) y aparece al hacer hover sobre la imagen. */
 .buy-btn {
   position: absolute;
   bottom: 10px;
@@ -50,14 +83,20 @@
   transition: opacity 0.3s ease;
 }
 
+/* Mostrar el botón cuando el puntero está sobre la imagen. */
 .image-container:hover .buy-btn {
   opacity: 1;
 }
 
+/* Bloque con la información del producto (título y precio):
+   - padding para separar del borde. */
 .info {
   padding: 10px 15px;
 }
 
+/* Título del juego dentro de la tarjeta:
+   - tamaño y peso moderado, margen pequeño para separar del precio.
+   - line-height para mejorar lectura si el título ocupa varias líneas. */
 .info h3 {
   font-size: 14px;
   font-weight: 500;
@@ -65,6 +104,8 @@
   line-height: 1.4;
 }
 
+/* Estilo del precio:
+   - color llamativo y peso para destacarlo dentro de la tarjeta. */
 .price {
   color: #00ffcc;
   font-weight: 600;

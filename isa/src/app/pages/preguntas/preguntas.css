@@ -1,48 +1,66 @@
-/* Contenedor general */
+/* Archivo: preguntas.css
+   Descripción:
+     Estilos para la página de Preguntas frecuentes.
+     Comentarios sencillos en español para entender qué hace cada bloque.
+*/
+
+/* ...existing code... */
+
+/* Contenedor general:
+   - Fondo oscuro, texto claro y espacio alrededor.
+   - Máximo ancho y centrado para que el contenido no ocupe toda la pantalla.
+*/
 .preguntas-container {
-  background-color: #0e0e0e; /* fondo oscuro para mantener el estilo */
-  color: #fff;
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: 0 auto;
-  border-radius: 10px;
+  background-color: #0e0e0e; /* fondo oscuro */
+  color: #fff;               /* texto claro para leer sobre fondo oscuro */
+  padding: 40px 20px;        /* espacio interno arriba/abajo y a los lados */
+  max-width: 900px;          /* ancho máximo para mejorar lectura */
+  margin: 0 auto;            /* centrar horizontalmente */
+  border-radius: 10px;       /* esquinas redondeadas */
 }
 
-/* Título principal */
+/* Título principal:
+   - Centrado, tamaño grande y línea debajo para destacarlo.
+*/
 .titulo-preguntas {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-  border-bottom: 2px solid #ff1a1a;
-  display: inline-block;
-  padding-bottom: 5px;
-  letter-spacing: 1px;
+  text-align: center;               /* centrar el título */
+  font-size: 1.8rem;                /* tamaño de letra principal */
+  margin-bottom: 30px;              /* separación debajo del título */
+  border-bottom: 2px solid #ff1a1a; /* línea roja debajo */
+  display: inline-block;            /* para que la línea tenga el ancho del texto */
+  padding-bottom: 5px;              /* espacio entre texto y línea */
+  letter-spacing: 1px;              /* separación entre letras para mejor lectura */
 }
 
-/* Cada bloque de pregunta */
+/* Cada bloque de pregunta:
+   - Fondo ligeramente distinto, espacio interior y separación entre preguntas.
+*/
 .pregunta {
-  margin-bottom: 25px;
-  padding: 15px 20px;
-  background-color: #1a1a1a;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  margin-bottom: 25px;         /* espacio entre preguntas */
+  padding: 15px 20px;         /* espacio dentro del bloque */
+  background-color: #1a1a1a;  /* fondo un poco más claro que el contenedor */
+  border-radius: 8px;         /* esquinas suaves */
+  transition: background-color 0.3s ease; /* transición suave al hover */
 }
 
-/* Cambio leve al pasar el mouse */
+/* Hover en la pregunta:
+   - Cambia el fondo para dar retroalimentación visual al pasar el ratón. */
 .pregunta:hover {
   background-color: #222222;
 }
 
-/* Título de la pregunta */
+/* Título de la pregunta:
+   - Color llamativo y tamaño medio para distinguirlo de la respuesta. */
 .pregunta-titulo {
-  font-size: 1.2rem;
-  color: #ff1a1a;
-  margin-bottom: 8px;
+  font-size: 1.2rem;     /* tamaño del título de la pregunta */
+  color: #ff1a1a;        /* color rojo para destacarlo */
+  margin-bottom: 8px;    /* separación entre título y respuesta */
 }
 
-/* Texto de la respuesta */
+/* Texto de la respuesta:
+   - Color más claro que el fondo, buena lectura gracias al interlineado. */
 .pregunta-respuesta {
-  color: #cccccc;
-  line-height: 1.5;
-  font-size: 0.95rem;
+  color: #cccccc;       /* gris claro para el texto de la respuesta */
+  line-height: 1.5;     /* espacio entre líneas para mejorar lectura */
+  font-size: 0.95rem;   /* tamaño de fuente cómodo para párrafos */
 }

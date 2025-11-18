@@ -1,15 +1,37 @@
+<!-- Archivo: consola.html
+     Descripción:
+       Vista de la sección "Consola". Muestra tarjetas de juegos para consolas.
+       Comentarios sencillos en español para entender cada bloque.
+-->
+
 <div class="card-container">
+  <!-- Contenedor que agrupa todas las tarjetas de producto en filas/columnas -->
+
   <div class="product-card" *ngFor="let item of productos">
-    <div>
-      <p>{{ item.categoria }}</p>
-    </div>
+    <!-- Una tarjeta por cada producto en la lista 'productos' (Angular *ngFor) -->
+
     <div class="image-container">
+      <!-- Zona que contiene la imagen del juego y el botón encima -->
+
       <img [src]="item.imagen" [alt]="item.titulo">
+      <!-- Imagen del producto:
+           - [src] toma la ruta desde item.imagen
+           - [alt] usa el título para accesibilidad -->
+      
       <button class="buy-btn">Añadir al carrito</button>
+      <!-- Botón para añadir al carrito (aún necesita la lógica en el componente) -->
     </div>
+
     <div class="info">
+      <!-- Bloque con información visible: título y precio -->
+
       <h3>{{ item.titulo }}</h3>
+      <!-- Título o nombre del juego mostrado al usuario -->
+
       <p class="price">{{ item.precio }}</p>
+      <!-- Precio del juego:
+           - Muestra el número tal cual viene; para formato de moneda usar un pipe currency -->
     </div>
   </div>
 </div>
+```//

@@ -1,12 +1,43 @@
+// ...existing code...
+<!-- Archivo: galeria.html
+     Descripción:
+       Vista de la galería que muestra tarjetas con productos.
+       Comentarios sencillos en español para entender cada bloque.
+-->
+
 <div class="card-container">
+  <!-- Contenedor que agrupa todas las tarjetas de producto.
+       Aquí se pueden ver varias tarjetas en fila/columnas según CSS. -->
+
   <div class="product-card" *ngFor="let item of productos">
+    <!-- Se repite una tarjeta por cada elemento de la lista 'productos'.
+         'item' es el objeto con datos (imagen, titulo, precio, categoria). -->
+
     <div class="image-container">
+      <!-- Contenedor de la imagen y el botón.
+           Usado para posicionar el botón sobre la imagen. -->
       <img [src]="item.imagen" [alt]="item.titulo">
+      <!-- Imagen del producto:
+           - [src] toma la ruta desde item.imagen.
+           - [alt] es el texto alternativo (mejora accesibilidad). -->
       <button class="buy-btn">Añadir al carrito</button>
+      <!-- Botón para añadir el producto al carrito.
+           - Ahora solo está en la plantilla; hace falta lógica en el componente
+             para que realmente agregue al carrito. -->
     </div>
+
     <div class="info">
+      <!-- Bloque con la información visible del producto:
+           título y precio. -->
       <h3>{{ item.titulo }}</h3>
+      <!-- Título o nombre del producto mostrado al usuario. -->
+
       <p class="price">{{ item.precio }}</p>
+      <!-- Precio del producto.
+           - Muestra el valor tal cual viene en los datos.
+           - Si querés formato con moneda, usar un pipe (ej. | currency) en Angular. -->
     </div>
   </div>
 </div>
+// ...existing code...
+```// filepath:

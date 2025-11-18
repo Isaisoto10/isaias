@@ -1,12 +1,27 @@
+/* Archivo: contacto.css
+   Descripción:
+     Estilos para la página de contacto.
+     Comentarios sencillos en español que explican qué hace cada regla.
+*/
+
+/* .card:
+   - Añade una transición suave cuando la tarjeta cambia (por ejemplo al hacer hover).
+   - transform y box-shadow se animan para dar un pequeño movimiento y sombra. */
 .card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* .card:hover:
+   - Al poner el cursor sobre la tarjeta se levanta un poco (translateY) y
+     aparece una sombra más marcada para dar sensación de profundidad. */
 .card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* button:
+   - Estilo simple para botones en la página de contacto.
+   - border-radius redondea los bordes para un aspecto más moderno. */
 button {
   border-radius: 20px;
 }
